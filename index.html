@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SmileCraft Dental Studio | Premium Cosmetic Dentistry New York</title>
+<meta name="description" content="Award-winning cosmetic dentistry in New York. Teeth whitening, implants, Invisalign, veneers & more. Free consultation. Same-day emergency appointments."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0D2340;--navy-mid:#163660;--navy-light:#1E4D85;
+  --teal:#0E8A7A;--teal-light:#12B3A0;--teal-pale:#E8F7F6;
+  --sky:#3B9ECC;--sky-pale:#EAF5FB;
+  --mint:#C8EDE9;
+  --white:#FFFFFF;--offwhite:#F7FAFB;--warm-gray:#F2F5F7;
+  --slate:#526070;--slate-light:#8EA0B0;--slate-pale:#E4EAF0;
+  --gold:#B8935A;--gold-light:#D4B07A;--gold-pale:#FAF5EB;
+  --green:#18A96A;--red:#E03434;
+  --text:#1A2F45;
+  --radius:14px;
+  --shadow-sm:0 2px 12px rgba(13,35,64,.07);
+  --shadow-md:0 8px 32px rgba(13,35,64,.11);
+  --shadow-lg:0 20px 60px rgba(13,35,64,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Lora',serif}
+a{text-decoration:none;color:inherit}
+button{cursor:pointer;font-family:'Plus Jakarta Sans',sans-serif}
+input,select,textarea{font-family:'Plus Jakarta Sans',sans-serif}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--teal);border-radius:3px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatAnim{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+@keyframes spinSlow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+.animate-up{animation:fadeUp .7s ease both}
+.delay-1{animation-delay:.12s}.delay-2{animation-delay:.24s}.delay-3{animation-delay:.36s}
+.float{animation:floatAnim 5s ease-in-out infinite}
+
+.container{max-width:1180px;margin:0 auto;padding:0 5%}
+.section{padding:90px 5%}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+
+/* Typography */
+.section-label{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.section-label::before{content:'';display:block;width:22px;height:2px;background:var(--teal);border-radius:2px}
+.section-label span{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal)}
+.teal-divider{width:40px;height:3px;background:linear-gradient(90deg,var(--teal),var(--sky));border-radius:2px;margin:12px 0 22px}
+.display{font-size:clamp(32px,3.8vw,54px);font-weight:400;line-height:1.18;letter-spacing:-.3px}
+.display em{font-style:italic;color:var(--teal)}
+
+/* Buttons */
+.btn-primary{background:linear-gradient(135deg,var(--navy),var(--navy-light));color:var(--white);border:none;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;transition:all .2s;display:inline-block;letter-spacing:.01em}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(13,35,64,.28)}
+.btn-teal{background:linear-gradient(135deg,var(--teal),var(--teal-light));color:var(--white);border:none;padding:14px 28px;border-radius:10px;font-size:14px;font-weight:700;transition:all .2s;display:inline-block}
+.btn-teal:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(14,138,122,.3)}
+.btn-ghost{background:var(--white);color:var(--navy);border:1.5px solid var(--slate-pale);padding:13px 26px;border-radius:10px;font-size:14px;font-weight:600;transition:all .2s}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+.btn-whatsapp{background:#25D366;color:var(--white);padding:14px 24px;border-radius:10px;font-size:14px;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all .2s}
+.btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(37,211,102,.3)}
+
+/* Badge */
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.badge-teal{background:var(--teal-pale);color:var(--teal)}
+.badge-gold{background:var(--gold-pale);color:var(--gold)}
+.badge-red{background:#FEF2F2;color:#C72020}
+.badge-green{background:#EDFAF3;color:#0F7A4E}
+.badge-sky{background:var(--sky-pale);color:var(--sky)}
+
+/* ─── EMERGENCY BANNER ─── */
+#emergency-banner{background:var(--navy);padding:9px 5%;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap}
+#emergency-banner span{color:rgba(255,255,255,.8);font-size:13px;font-weight:500}
+#emergency-banner strong{color:var(--white)}
+#emergency-banner a{background:var(--red);color:var(--white);padding:5px 16px;border-radius:20px;font-size:13px;font-weight:700;transition:background .2s}
+#emergency-banner a:hover{background:#c02a2a}
+
+/* ─── NAVBAR ─── */
+#navbar{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--slate-pale)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:0 5%;display:flex;align-items:center;height:66px;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;cursor:pointer}
+.logo-icon{width:38px;height:38px;flex-shrink:0}
+.logo-text{display:flex;flex-direction:column;line-height:1}
+.logo-name{font-size:16px;font-weight:800;letter-spacing:-.3px;color:var(--navy)}
+.logo-sub{font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-link{background:none;border:none;font-size:14px;font-weight:500;color:var(--slate);transition:color .2s;padding:0}
+.nav-link:hover{color:var(--teal)}
+#hamburger{display:none;background:none;border:none;color:var(--navy);padding:4px}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--white);z-index:300;flex-direction:column;padding:28px 24px;gap:20px}
+.mobile-menu.open{display:flex}
+.mobile-menu .nav-link{font-size:20px;font-family:'Lora',serif;padding:10px 0;border-bottom:1px solid var(--slate-pale);color:var(--navy)}
+
+/* ─── HERO ─── */
+#hero{position:relative;overflow:hidden;background:linear-gradient(150deg,var(--offwhite) 0%,var(--teal-pale) 50%,var(--sky-pale) 100%);min-height:90vh;display:flex;align-items:center;padding:60px 5%}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none}
+.hero-orb-1{top:-5%;right:0%;width:500px;height:500px;background:radial-gradient(circle,rgba(14,138,122,.08),transparent 65%)}
+.hero-orb-2{bottom:0%;left:-5%;width:350px;height:350px;background:radial-gradient(circle,rgba(59,158,204,.08),transparent 65%)}
+.hero-grid{max-width:1180px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-stats{display:flex;gap:30px;flex-wrap:wrap;margin-top:36px;padding-top:30px;border-top:1px solid rgba(14,138,122,.15)}
+.stat-val{font-size:24px;font-weight:800;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif}
+.stat-lbl{font-size:12px;font-weight:700;color:var(--teal);margin-top:1px}
+.stat-sub{font-size:11px;color:var(--slate-light)}
+.hero-visual{position:relative;display:flex;justify-content:center;align-items:center}
+.hero-card{background:var(--white);border-radius:24px;padding:36px 32px;box-shadow:var(--shadow-lg);width:100%;max-width:380px}
+.hero-card-icon{width:64px;height:64px;margin:0 auto 20px;display:block}
+.hero-card-title{font-size:26px;text-align:center;margin-bottom:8px;color:var(--navy)}
+.hero-card-sub{font-size:14px;color:var(--slate);text-align:center;line-height:1.6}
+.hero-rating{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:18px;padding-top:18px;border-top:1px solid var(--slate-pale)}
+.hero-stars{color:#F59E0B;font-size:16px;letter-spacing:2px}
+.floating-badge{position:absolute;padding:9px 14px;border-radius:26px;font-size:12px;font-weight:700;white-space:nowrap;box-shadow:var(--shadow-md)}
+.fb-teal{background:var(--teal-pale);color:var(--teal);border:1px solid rgba(14,138,122,.15)}
+.fb-red{background:#FEF2F2;color:#C72020;border:1px solid #FECACA}
+.fb-sky{background:var(--sky-pale);color:var(--sky);border:1px solid rgba(59,158,204,.15)}
+
+/* ─── MARQUEE ─── */
+#marquee{background:var(--navy-mid);padding:12px 0;overflow:hidden;white-space:nowrap}
+.marquee-inner{display:inline-flex;animation:marquee 30s linear infinite}
+.marquee-item{color:rgba(255,255,255,.65);font-size:12px;font-weight:600;letter-spacing:.06em;margin-right:52px;display:flex;align-items:center;gap:8px}
+.marquee-dot{width:4px;height:4px;border-radius:50%;background:var(--teal-light);flex-shrink:0}
+
+/* ─── ABOUT ─── */
+#about{background:var(--white)}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.about-feature{padding:16px;background:var(--warm-gray);border-radius:12px;border:1px solid var(--slate-pale);display:flex;gap:12px;align-items:flex-start}
+.about-feature-icon-wrap{width:38px;height:38px;border-radius:10px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.about-feature-title{font-size:13px;font-weight:700;margin-bottom:2px}
+.about-feature-sub{font-size:12px;color:var(--slate)}
+
+/* ─── TEAM PANEL ─── */
+.team-panel{background:linear-gradient(150deg,var(--teal-pale),var(--sky-pale));border-radius:20px;padding:28px 24px}
+.team-panel-title{font-size:22px;color:var(--navy);margin-bottom:20px}
+.team-card-row{background:var(--white);border-radius:14px;padding:14px 16px;margin-bottom:12px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow-sm);transition:all .25s;cursor:pointer}
+.team-card-row:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:14px;flex-shrink:0}
+.team-name{font-size:14px;font-weight:700;color:var(--navy)}
+.team-role{font-size:11px;color:var(--slate);margin-top:2px}
+.stars{color:#F59E0B;font-size:11px;letter-spacing:1px}
+
+/* ─── DOCTORS SECTION ─── */
+#doctors{background:var(--offwhite)}
+.doctor-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);transition:all .3s}
+.doctor-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.doctor-card-photo{height:220px;background:linear-gradient(150deg,var(--teal-pale),var(--sky-pale));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.doctor-avatar-big{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal-light));display:flex;align-items:center;justify-content:center;color:var(--white);font-size:32px;font-weight:800;border:4px solid var(--white);box-shadow:0 8px 24px rgba(13,35,64,.2)}
+.doctor-photo-badge{position:absolute;bottom:14px;right:14px}
+.doctor-card-body{padding:20px}
+.doctor-card-name{font-size:19px;color:var(--navy);margin-bottom:4px}
+.doctor-card-spec{font-size:13px;color:var(--teal);font-weight:600;margin-bottom:10px}
+.doctor-card-desc{font-size:13px;color:var(--slate);line-height:1.6;margin-bottom:14px}
+.doctor-creds{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.cred-tag{font-size:10px;font-weight:700;background:var(--warm-gray);color:var(--slate);padding:3px 10px;border-radius:20px;border:1px solid var(--slate-pale);letter-spacing:.03em}
+.doctor-card-footer{display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px solid var(--slate-pale)}
+.doctor-exp{font-size:12px;color:var(--slate);font-weight:600}
+.doctor-rating-row{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;color:var(--navy)}
+
+/* ─── SERVICES ─── */
+#services{background:var(--warm-gray)}
+.service-card{background:var(--white);border-radius:18px;padding:24px;border:1px solid var(--slate-pale);transition:all .3s;cursor:pointer;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--sky))}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.service-icon-wrap{width:48px;height:48px;border-radius:12px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.service-name{font-size:18px;font-weight:700;margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy)}
+.service-desc{font-size:13px;color:var(--slate);line-height:1.6;margin-bottom:14px}
+.service-footer{display:flex;justify-content:space-between;padding:10px 0 0;border-top:1px solid var(--slate-pale);font-size:12px;color:var(--slate)}
+.service-price{font-weight:700;color:var(--teal)}
+.service-expand{display:none;margin-top:12px;padding:12px;background:var(--teal-pale);border-radius:10px;font-size:13px;color:var(--navy-mid);line-height:1.6}
+.service-card.open .service-expand{display:block}
+.financing-banner{background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:18px;padding:30px 36px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;margin-top:36px}
+
+/* ─── GALLERY ─── */
+#gallery{background:var(--white)}
+.gallery-card{border-radius:18px;overflow:hidden;border:1px solid var(--slate-pale);box-shadow:var(--shadow-sm)}
+.gallery-split{display:grid;grid-template-columns:1fr 1fr;height:190px;position:relative}
+.gallery-before{background:linear-gradient(145deg,#E2E8F0,#CBD5E1);display:flex;align-items:center;justify-content:center;text-align:center;padding:16px}
+.gallery-after{background:linear-gradient(145deg,var(--teal-pale),var(--sky-pale));display:flex;align-items:center;justify-content:center;text-align:center;padding:16px}
+.gallery-label{font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px}
+.gallery-detail{font-size:10px;color:var(--slate);line-height:1.4}
+.gallery-divider{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:var(--white);border:2px solid var(--teal);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--teal);z-index:1}
+.gallery-body{padding:16px 18px}
+.gallery-title{font-size:16px;font-weight:700;margin-bottom:8px;font-family:'Plus Jakarta Sans',sans-serif}
+.gallery-footer{display:flex;justify-content:space-between;align-items:center;font-size:12px}
+
+/* ─── TESTIMONIALS ─── */
+#testimonials{background:var(--warm-gray)}
+.testimonial-featured{background:var(--white);border-radius:22px;padding:44px;margin-bottom:22px;box-shadow:var(--shadow-md);position:relative}
+.big-quote{font-size:72px;color:var(--teal-pale);line-height:1;position:absolute;top:18px;left:28px;font-family:Georgia,serif;color:var(--mint)}
+.testimonial-text{font-size:20px;font-family:'Lora',serif;font-style:italic;color:var(--navy);line-height:1.65;margin-bottom:26px;position:relative;z-index:1}
+.testimonial-author{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
+.author-info{display:flex;align-items:center;gap:13px}
+.author-name{font-size:15px;font-weight:700}
+.author-loc{font-size:12px;color:var(--slate)}
+.testimonial-dots{display:flex;justify-content:center;gap:7px;margin-bottom:22px}
+.dot{height:7px;border-radius:4px;border:none;cursor:pointer;transition:all .3s;background:var(--slate-light)}
+.dot.active{background:var(--teal);width:22px}
+.dot:not(.active){width:7px}
+.mini-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.mini-card{background:var(--white);border-radius:13px;padding:16px;cursor:pointer;border:2px solid transparent;transition:border .3s}
+.mini-card.active{border-color:var(--teal)}
+.mini-text{font-size:13px;color:var(--slate);margin:7px 0 9px;line-height:1.5}
+.mini-name{font-size:13px;font-weight:700}
+.mini-service{font-size:11px;color:var(--slate-light)}
+.google-badge{display:inline-flex;align-items:center;gap:13px;background:var(--white);padding:14px 28px;border-radius:50px;box-shadow:var(--shadow-sm);margin-top:28px}
+.google-g{font-size:20px;font-weight:700;font-family:Georgia,serif;color:#4285F4}
+.google-rating{font-weight:700;font-size:15px}
+.google-count{font-size:12px;color:var(--slate)}
+
+/* ─── FAQ ─── */
+#faq{background:var(--white)}
+.faq-item{border-bottom:1px solid var(--slate-pale)}
+.faq-btn{width:100%;padding:18px 0;background:none;border:none;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:20px}
+.faq-question{font-size:15px;font-weight:600;color:var(--navy)}
+.faq-toggle{font-size:20px;color:var(--teal);transition:transform .3s;flex-shrink:0;line-height:1}
+.faq-answer{display:none;padding-bottom:18px}
+.faq-answer p{font-size:14px;color:var(--slate);line-height:1.7}
+.faq-item.open .faq-answer{display:block}
+.faq-item.open .faq-toggle{transform:rotate(45deg)}
+.faq-cta{margin-top:36px;background:var(--teal-pale);border-radius:14px;padding:26px;text-align:center}
+
+/* ─── CONTACT ─── */
+#contact{background:var(--offwhite)}
+.contact-info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:20px}
+.contact-icon{width:42px;height:42px;border-radius:11px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-label{font-size:11px;font-weight:700;color:var(--teal);text-transform:uppercase;letter-spacing:.08em}
+.contact-val{font-size:14px;color:var(--navy);margin-top:3px;line-height:1.6}
+.map-placeholder{margin-top:24px;height:190px;border-radius:14px;background:linear-gradient(145deg,var(--warm-gray),var(--teal-pale));display:flex;align-items:center;justify-content:center;border:1px solid var(--slate-pale);text-align:center;color:var(--slate)}
+.contact-form-card{background:var(--white);border-radius:22px;padding:32px;box-shadow:var(--shadow-md)}
+.form-label{font-size:11px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:6px;margin-top:14px}
+.form-label:first-child{margin-top:0}
+.form-input{width:100%;padding:11px 14px;border:1.5px solid var(--slate-pale);border-radius:9px;font-size:14px;outline:none;color:var(--navy);background:var(--offwhite);transition:border-color .2s}
+.form-input:focus{border-color:var(--teal)}
+.form-select{width:100%;padding:11px 14px;border:1.5px solid var(--slate-pale);border-radius:9px;font-size:14px;outline:none;color:var(--navy);background:var(--offwhite);appearance:none}
+textarea.form-input{resize:vertical;min-height:96px}
+
+/* ─── FOOTER ─── */
+footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.footer-desc{color:rgba(255,255,255,.55);font-size:13px;line-height:1.7;max-width:270px;font-weight:300}
+.footer-socials{display:flex;gap:9px;margin-top:16px}
+.social-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s;color:var(--white)}
+.social-btn:hover{background:rgba(255,255,255,.18)}
+.footer-heading{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-light);margin-bottom:13px}
+.footer-link{display:block;color:rgba(255,255,255,.55);font-size:13px;margin-bottom:8px;transition:color .2s}
+.footer-link:hover{color:var(--white)}
+.certifications{display:flex;gap:10px;flex-wrap:wrap;padding:18px 0;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:22px}
+.cert-badge{padding:4px 12px;border-radius:20px;border:1px solid rgba(14,138,122,.3);color:var(--teal-light);font-size:11px;font-weight:600}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.footer-copy{font-size:13px;color:rgba(255,255,255,.4)}
+
+/* ─── FLOATING BUTTONS ─── */
+#whatsapp-btn{position:fixed;bottom:22px;right:22px;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 22px rgba(37,211,102,.4);z-index:700;transition:transform .2s;text-decoration:none}
+#whatsapp-btn:hover{transform:scale(1.1)}
+
+/* ─── STICKY MOBILE CTA ─── */
+#sticky-cta{position:fixed;bottom:0;left:0;right:0;padding:10px 14px 14px;background:var(--white);border-top:1px solid var(--slate-pale);display:flex;gap:9px;z-index:600}
+#sticky-cta .btn-book{flex:2;padding:12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:var(--white);border:none;border-radius:9px;font-size:14px;font-weight:700;cursor:pointer}
+#sticky-cta .btn-emerg{flex:1;padding:12px;background:var(--red);color:var(--white);border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer}
+
+/* ─── BOOKING MODAL ─── */
+#booking-overlay{display:none;position:fixed;inset:0;background:rgba(13,35,64,.65);z-index:1000;align-items:center;justify-content:center;padding:14px}
+#booking-overlay.open{display:flex}
+.modal{background:var(--white);border-radius:18px;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:var(--shadow-lg)}
+.modal-header{background:linear-gradient(135deg,var(--navy),var(--teal));padding:26px 30px 22px;border-radius:18px 18px 0 0;position:relative}
+.modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.15);border:none;color:var(--white);width:30px;height:30px;border-radius:50%;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.modal-label{color:rgba(255,255,255,.7);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.modal-title{color:var(--white);font-size:20px;font-weight:700;margin-bottom:18px}
+.progress-steps{display:flex;gap:5px}
+.progress-step{flex:1}
+.progress-bar{height:3px;border-radius:2px;transition:background .3s}
+.progress-bar.done{background:var(--teal-light)}
+.progress-bar.pending{background:rgba(255,255,255,.18)}
+.progress-name{font-size:9px;color:rgba(255,255,255,.45);margin-top:4px;font-weight:600}
+.progress-name.done{color:var(--teal-light)}
+.modal-body{padding:26px 30px}
+.step{display:none}.step.active{display:block}
+.step-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:14px}
+.service-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
+.service-opt{padding:11px 13px;border-radius:9px;border:1.5px solid var(--slate-pale);background:var(--offwhite);cursor:pointer;text-align:left;transition:all .2s}
+.service-opt:hover,.service-opt.selected{border-color:var(--teal);background:var(--teal-pale)}
+.service-opt-icon{font-size:17px;margin-bottom:3px}
+.service-opt-name{font-size:12px;font-weight:600;color:var(--navy)}
+.service-opt-price{font-size:11px;color:var(--slate);margin-top:2px}
+.emergency-opt{background:#FEF2F2;border:1.5px solid #FECACA;border-radius:11px;padding:11px 15px;display:flex;justify-content:space-between;align-items:center;margin-top:3px}
+.emergency-opt-text{font-size:13px;font-weight:700;color:#C72020}
+.doctor-list{margin-bottom:14px}
+.doctor-opt{width:100%;padding:11px 14px;border-radius:9px;border:1.5px solid var(--slate-pale);background:var(--offwhite);cursor:pointer;display:flex;align-items:center;gap:11px;margin-bottom:7px;text-align:left;transition:all .2s}
+.doctor-opt:hover,.doctor-opt.selected{border-color:var(--teal);background:var(--teal-pale)}
+.doctor-opt .avatar{width:38px;height:38px;font-size:13px}
+.doctor-opt-name{font-size:13px;font-weight:700;color:var(--navy)}
+.doctor-opt-role{font-size:11px;color:var(--slate)}
+.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:5px}
+.time-opt{padding:8px 0;border-radius:7px;border:1.5px solid var(--slate-pale);background:var(--offwhite);cursor:pointer;font-size:11px;font-weight:600;color:var(--slate);transition:all .2s}
+.time-opt:hover,.time-opt.selected{border-color:var(--teal);background:var(--teal-pale);color:var(--teal)}
+.form-field{margin-bottom:12px}
+.field-label{font-size:11px;font-weight:700;color:var(--slate);text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:5px}
+.field-input{width:100%;padding:10px 13px;border:1.5px solid var(--slate-pale);border-radius:9px;font-size:14px;outline:none;background:var(--offwhite);color:var(--navy);transition:border-color .2s}
+.field-input:focus{border-color:var(--teal)}
+.privacy-note{padding:9px 13px;background:var(--teal-pale);border-radius:7px;font-size:12px;color:var(--navy-mid);margin-top:9px}
+.modal-nav{display:flex;gap:11px;margin-top:20px}
+.btn-back{flex:1;padding:12px;border:1.5px solid var(--slate-pale);border-radius:9px;background:var(--white);font-size:13px;font-weight:600;cursor:pointer;color:var(--slate)}
+.btn-next{flex:2;padding:12px;background:linear-gradient(135deg,var(--navy),var(--teal));border:none;border-radius:9px;color:var(--white);font-size:14px;font-weight:700;cursor:pointer}
+.confirm-icon{width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,var(--green),#0d8a55);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--white)}
+.confirm-title{font-size:20px;font-weight:700;text-align:center;color:var(--navy);margin-bottom:7px}
+.confirm-sub{color:var(--slate);font-size:14px;text-align:center;line-height:1.6;margin-bottom:22px}
+.summary-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--slate-pale);font-size:13px}
+.summary-key{color:var(--slate);font-weight:600}
+.summary-val{color:var(--navy);font-weight:700}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .grid-2,.hero-grid,.footer-grid{grid-template-columns:1fr}
+  .grid-3,.grid-4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .hero-visual{order:-1}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  #hamburger{display:block}
+  #sticky-cta{display:flex}
+  body{padding-bottom:60px}
+  .section{padding:60px 5%}
+  .time-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(min-width:901px){#sticky-cta{display:none}}
+</style>
+</head>
+<body>
+
+<!-- ─── Emergency Banner ─── -->
+<div id="emergency-banner">
+  <span>Dental Emergency? <strong>Same-Day Appointments Available</strong></span>
+  <a href="tel:+18005553464">Call (800) 555-SMILE</a>
+</div>
+
+<!-- ─── Navbar ─── -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a class="logo" href="#hero">
+      <!-- SVG Tooth Logo -->
+      <svg class="logo-icon" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="38" height="38" rx="10" fill="#0D2340"/>
+        <path d="M19 7C15.5 7 12 9.5 11 12.5C10.2 14.8 10.5 17 11.5 18.8C12 19.8 12.5 21 12.5 23C12.5 26 13.5 31 15.5 31C16.5 31 17 29.5 17.5 27.5C18 25.5 18.5 24.5 19 24.5C19.5 24.5 20 25.5 20.5 27.5C21 29.5 21.5 31 22.5 31C24.5 31 25.5 26 25.5 23C25.5 21 26 19.8 26.5 18.8C27.5 17 27.8 14.8 27 12.5C26 9.5 22.5 7 19 7Z" fill="white" stroke="white" stroke-width="0.5"/>
+        <path d="M15.5 12C16.2 11.2 17.5 10.7 19 10.7C20.5 10.7 21.8 11.2 22.5 12" stroke="#0E8A7A" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name">SmileCraft</span>
+        <span class="logo-sub">Dental Studio</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <button class="nav-link" onclick="scrollToSection('about')">About</button>
+      <button class="nav-link" onclick="scrollToSection('doctors')">Our Doctors</button>
+      <button class="nav-link" onclick="scrollToSection('services')">Services</button>
+      <button class="nav-link" onclick="scrollToSection('gallery')">Results</button>
+      <button class="nav-link" onclick="scrollToSection('testimonials')">Reviews</button>
+      <button class="nav-link" onclick="scrollToSection('contact')">Contact</button>
+      <button class="btn-primary" onclick="openBooking()">Book Free Consult</button>
+    </div>
+    <button id="hamburger" onclick="toggleMobileMenu()">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 6h16M3 11h16M3 16h16" stroke="#0D2340" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+    <div class="logo-name" style="font-size:20px;font-family:'Lora',serif">SmileCraft Dental</div>
+    <button onclick="toggleMobileMenu()" style="background:none;border:none;font-size:24px;color:var(--navy)">&#x2715;</button>
+  </div>
+  <button class="nav-link" onclick="scrollToSection('about');toggleMobileMenu()">About</button>
+  <button class="nav-link" onclick="scrollToSection('doctors');toggleMobileMenu()">Our Doctors</button>
+  <button class="nav-link" onclick="scrollToSection('services');toggleMobileMenu()">Services</button>
+  <button class="nav-link" onclick="scrollToSection('gallery');toggleMobileMenu()">Results</button>
+  <button class="nav-link" onclick="scrollToSection('testimonials');toggleMobileMenu()">Reviews</button>
+  <button class="nav-link" onclick="scrollToSection('contact');toggleMobileMenu()">Contact</button>
+  <button class="btn-primary" style="width:100%;margin-top:10px;text-align:center" onclick="openBooking();toggleMobileMenu()">Book Free Consultation</button>
+  <a href="tel:+18005553464" class="btn-ghost" style="width:100%;text-align:center;display:block;margin-top:10px">Emergency: (800) 555-SMILE</a>
+</div>
+
+<!-- ─── Hero ─── -->
+<section id="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-grid">
+    <div class="animate-up">
+      <div class="section-label"><span>Cosmetic &amp; Restorative Dentistry</span></div>
+      <h1 class="display" style="margin-bottom:14px">Exceptional Care.<br/><em>Beautiful Smiles.</em></h1>
+      <div class="teal-divider"></div>
+      <p style="font-size:16px;color:var(--slate);line-height:1.75;margin-bottom:28px;font-weight:400;max-width:480px">
+        Award-winning dental care in the heart of New York. Our board-certified specialists combine advanced technology with genuine compassion to give you the smile you deserve.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px">
+        <button class="btn-primary" onclick="openBooking()" style="font-size:15px;padding:15px 30px">Book Free Consultation</button>
+        <a class="btn-whatsapp" href="https://wa.me/18005553464?text=Hi%20SmileCraft!%20I'd%20like%20to%20book%20a%20consultation." target="_blank">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-val">4.9</div>
+          <div class="stat-lbl">Google Rating</div>
+          <div class="stat-sub">847+ verified reviews</div>
+        </div>
+        <div>
+          <div class="stat-val">14+</div>
+          <div class="stat-lbl">Years Experience</div>
+          <div class="stat-sub">Established 2010</div>
+        </div>
+        <div>
+          <div class="stat-val">12,000+</div>
+          <div class="stat-lbl">Happy Patients</div>
+          <div class="stat-sub">And counting</div>
+        </div>
+        <div>
+          <div class="stat-val">98%</div>
+          <div class="stat-lbl">Patient Satisfaction</div>
+          <div class="stat-sub">Clinically measured</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual animate-up delay-2">
+      <div class="hero-card float">
+        <!-- Smile SVG illustration -->
+        <svg class="hero-card-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#E8F7F6" stroke="#0E8A7A" stroke-width="2"/>
+          <path d="M18 34c0 0 4 10 14 10s14-10 14-10" stroke="#0E8A7A" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- teeth -->
+          <rect x="22" y="34" width="5" height="6" rx="1.5" fill="white" stroke="#C8EDE9" stroke-width="1"/>
+          <rect x="27.5" y="34" width="5" height="7" rx="1.5" fill="white" stroke="#C8EDE9" stroke-width="1"/>
+          <rect x="33" y="34" width="5" height="6" rx="1.5" fill="white" stroke="#C8EDE9" stroke-width="1"/>
+          <circle cx="24" cy="26" r="3" fill="#163660" opacity=".15"/>
+          <circle cx="40" cy="26" r="3" fill="#163660" opacity=".15"/>
+          <circle cx="24.5" cy="25.5" r="1.5" fill="#163660"/>
+          <circle cx="40.5" cy="25.5" r="1.5" fill="#163660"/>
+        </svg>
+        <h3 class="hero-card-title">Your Dream Smile</h3>
+        <p class="hero-card-sub">Board-certified specialists. Precision technology. Genuine care.</p>
+        <div class="hero-rating">
+          <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span style="font-size:13px;color:var(--slate);font-weight:600">4.9 / 5 — 847 reviews</span>
+        </div>
+      </div>
+      <div class="floating-badge fb-teal" style="top:14px;left:-18px">AACD Certified Practice</div>
+      <div class="floating-badge fb-red" style="bottom:40px;right:-14px">Same-Day Emergency Care</div>
+      <div class="floating-badge fb-sky" style="top:46%;left:-56px">Invisalign Diamond Provider</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Marquee ─── -->
+<div id="marquee">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="marquee-dot"></span> AACD Fellow Member</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> ADA Accredited</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Invisalign Diamond Provider</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> OSHA Certified</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> HIPAA Compliant</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Google Reviews 4.9</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> 0% APR Financing Available</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> 24/7 Emergency Line</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> AACD Fellow Member</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> ADA Accredited</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Invisalign Diamond Provider</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> OSHA Certified</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> HIPAA Compliant</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Google Reviews 4.9</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> 0% APR Financing Available</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> 24/7 Emergency Line</span>
+  </div>
+</div>
+
+<!-- ─── About ─── -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="grid-2">
+      <div class="animate-up">
+        <div class="section-label"><span>Our Story</span></div>
+        <h2 class="display">Dental Excellence,<br/><em>Artfully Delivered.</em></h2>
+        <div class="teal-divider"></div>
+        <p style="font-size:15px;color:var(--slate);line-height:1.8;margin-bottom:16px">
+          Founded in 2010 by Dr. Sophia Whitmore, SmileCraft Dental Studio was built on one belief: that exceptional dental care and a comfortable patient experience should always go hand in hand.
+        </p>
+        <p style="font-size:15px;color:var(--slate);line-height:1.8">
+          Today, we're New York's premier destination for cosmetic and restorative dentistry — combining hospital-grade sterilization, the latest digital imaging, and a warm, patient-first approach that sees every person as an individual.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </div>
+            <div>
+              <div class="about-feature-title">Award Winning</div>
+              <div class="about-feature-sub">Top NYC Dentist 2022–2024</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </div>
+            <div>
+              <div class="about-feature-title">Digital Dentistry</div>
+              <div class="about-feature-sub">3D imaging &amp; CAD/CAM</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            </div>
+            <div>
+              <div class="about-feature-title">Pain-Free Protocols</div>
+              <div class="about-feature-sub">The Wand anaesthetic system</div>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="about-feature-title">Hospital-Grade Sterile</div>
+              <div class="about-feature-sub">OSHA &amp; HIPAA compliant</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="team-panel">
+          <h3 class="team-panel-title">Our Specialists</h3>
+          <div class="team-card-row">
+            <div class="avatar">SW</div>
+            <div style="flex:1">
+              <div class="team-name">Dr. Sophia Whitmore</div>
+              <div class="team-role">Veneers &amp; Smile Design · 14 yrs</div>
+              <div style="margin-top:4px"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span style="font-size:11px;color:var(--slate-light)">312 reviews</span></div>
+            </div>
+            <span class="badge badge-teal">AACD</span>
+          </div>
+          <div class="team-card-row">
+            <div class="avatar">MC</div>
+            <div style="flex:1">
+              <div class="team-name">Dr. Marcus Chen</div>
+              <div class="team-role">Implants &amp; Oral Surgery · 11 yrs</div>
+              <div style="margin-top:4px"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span style="font-size:11px;color:var(--slate-light)">247 reviews</span></div>
+            </div>
+            <span class="badge badge-sky">Board Cert</span>
+          </div>
+          <div class="team-card-row">
+            <div class="avatar">PN</div>
+            <div style="flex:1">
+              <div class="team-name">Dr. Priya Nair</div>
+              <div class="team-role">Invisalign &amp; Orthodontics · 9 yrs</div>
+              <div style="margin-top:4px"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> <span style="font-size:11px;color:var(--slate-light)">189 reviews</span></div>
+            </div>
+            <span class="badge badge-green">AAO</span>
+          </div>
+          <button class="btn-teal" style="width:100%;margin-top:10px" onclick="openBooking()">Book with Any Specialist</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Meet Our Doctors ─── -->
+<section id="doctors" class="section" style="background:var(--offwhite)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-label" style="justify-content:center"><span>Our Clinical Team</span></div>
+      <h2 class="display">Meet Your<br/><em>Dental Specialists</em></h2>
+      <div class="teal-divider" style="margin:12px auto 18px"></div>
+      <p style="max-width:520px;margin:0 auto;color:var(--slate);font-size:15px;line-height:1.7">
+        Our team of board-certified specialists brings decades of combined experience, advanced training, and a genuine commitment to your oral health and confidence.
+      </p>
+    </div>
+    <div class="grid-3">
+      <!-- Doctor 1 -->
+      <div class="doctor-card animate-up">
+        <div class="doctor-card-photo">
+          <div class="doctor-avatar-big">SW</div>
+          <div class="doctor-photo-badge"><span class="badge badge-teal">Founder &amp; Director</span></div>
+        </div>
+        <div class="doctor-card-body">
+          <h3 class="doctor-card-name">Dr. Sophia Whitmore</h3>
+          <div class="doctor-card-spec">Cosmetic Dentistry &amp; Smile Design</div>
+          <p class="doctor-card-desc">A Harvard School of Dental Medicine graduate, Dr. Whitmore has transformed over 3,000 smiles using porcelain veneers, Lumineers, and full smile makeovers. Featured in New York Magazine's Best Dentists list three consecutive years.</p>
+          <div class="doctor-creds">
+            <span class="cred-tag">DDS, Harvard</span>
+            <span class="cred-tag">AACD Fellow</span>
+            <span class="cred-tag">Lumineers Certified</span>
+            <span class="cred-tag">ADA Member</span>
+          </div>
+          <div class="doctor-card-footer">
+            <span class="doctor-exp">14 years experience</span>
+            <div class="doctor-rating-row">
+              <span style="color:#F59E0B">&#9733;</span>
+              <span>4.9</span>
+              <span style="color:var(--slate);font-weight:400">(312)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Doctor 2 -->
+      <div class="doctor-card animate-up delay-1">
+        <div class="doctor-card-photo">
+          <div class="doctor-avatar-big">MC</div>
+          <div class="doctor-photo-badge"><span class="badge badge-sky">Oral Surgeon</span></div>
+        </div>
+        <div class="doctor-card-body">
+          <h3 class="doctor-card-name">Dr. Marcus Chen</h3>
+          <div class="doctor-card-spec">Dental Implants &amp; Oral Surgery</div>
+          <p class="doctor-card-desc">Dr. Chen completed a 3-year oral surgery residency at Columbia University and has placed over 1,800 implants with a 98.2% success rate. He specialises in full-arch restorations, bone grafting, and same-day implants.</p>
+          <div class="doctor-creds">
+            <span class="cred-tag">DDS, Columbia</span>
+            <span class="cred-tag">Board Certified ABOMS</span>
+            <span class="cred-tag">ITI Fellow</span>
+            <span class="cred-tag">AAOMS Member</span>
+          </div>
+          <div class="doctor-card-footer">
+            <span class="doctor-exp">11 years experience</span>
+            <div class="doctor-rating-row">
+              <span style="color:#F59E0B">&#9733;</span>
+              <span>4.9</span>
+              <span style="color:var(--slate);font-weight:400">(247)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Doctor 3 -->
+      <div class="doctor-card animate-up delay-2">
+        <div class="doctor-card-photo">
+          <div class="doctor-avatar-big">PN</div>
+          <div class="doctor-photo-badge"><span class="badge badge-green">Orthodontist</span></div>
+        </div>
+        <div class="doctor-card-body">
+          <h3 class="doctor-card-name">Dr. Priya Nair</h3>
+          <div class="doctor-card-spec">Invisalign &amp; Orthodontics</div>
+          <p class="doctor-card-desc">An Invisalign Diamond Plus Provider in the top 1% of providers nationwide, Dr. Nair has treated over 900 Invisalign cases. She also provides traditional braces, retainers, and accelerated orthodontics for adults and teens.</p>
+          <div class="doctor-creds">
+            <span class="cred-tag">DMD, NYU</span>
+            <span class="cred-tag">Invisalign Diamond+</span>
+            <span class="cred-tag">AAO Member</span>
+            <span class="cred-tag">3M Clarity Certified</span>
+          </div>
+          <div class="doctor-card-footer">
+            <span class="doctor-exp">9 years experience</span>
+            <div class="doctor-rating-row">
+              <span style="color:#F59E0B">&#9733;</span>
+              <span>4.8</span>
+              <span style="color:var(--slate);font-weight:400">(189)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <p style="font-size:14px;color:var(--slate);margin-bottom:16px">All doctors are board-certified, ADA members, and participate in 40+ hours of continuing education annually.</p>
+      <button class="btn-primary" onclick="openBooking()">Schedule with a Specialist</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Services ─── -->
+<section id="services" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px">
+      <div class="section-label" style="justify-content:center"><span>What We Offer</span></div>
+      <h2 class="display">Comprehensive<br/><em>Dental Services</em></h2>
+      <div class="teal-divider" style="margin:12px auto 18px"></div>
+      <p style="max-width:500px;margin:0 auto;color:var(--slate);font-size:15px;line-height:1.7">
+        From routine checkups to full smile transformations — every treatment delivered with precision and genuine care.
+      </p>
+    </div>
+    <div id="services-grid" class="grid-auto"></div>
+    <div class="financing-banner">
+      <div>
+        <div style="color:var(--teal-light);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px">Flexible Payment Options</div>
+        <h3 style="color:var(--white);font-size:26px;font-family:'Lora',serif">0% APR Financing Available</h3>
+        <p style="color:rgba(255,255,255,.6);font-size:13px;margin-top:6px">Split your treatment into affordable monthly payments. Most insurance plans accepted.</p>
+      </div>
+      <button class="btn-teal" style="font-size:15px" onclick="openBooking()">Get a Free Quote</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Before/After Gallery ─── -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-label" style="justify-content:center"><span>Patient Results</span></div>
+      <h2 class="display">Real Smiles,<br/><em>Real Transformations</em></h2>
+      <div class="teal-divider" style="margin:12px auto 0"></div>
+    </div>
+    <div class="grid-3">
+      <div class="gallery-card animate-up">
+        <div class="gallery-split">
+          <div class="gallery-before">
+            <div><div class="gallery-label" style="color:var(--slate)">Before</div><div class="gallery-detail">Discoloured &amp; uneven teeth</div></div>
+          </div>
+          <div class="gallery-after">
+            <div><div class="gallery-label" style="color:var(--teal)">After</div><div class="gallery-detail">Bright, even porcelain veneers</div></div>
+          </div>
+          <div class="gallery-divider">&#8652;</div>
+        </div>
+        <div class="gallery-body">
+          <div class="gallery-title">Porcelain Veneers</div>
+          <div class="gallery-footer">
+            <span class="badge badge-teal">Dr. Whitmore</span>
+            <span style="color:var(--slate-light);font-size:12px">6 veneers · 2 visits</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card animate-up delay-1">
+        <div class="gallery-split">
+          <div class="gallery-before">
+            <div><div class="gallery-label" style="color:var(--slate)">Before</div><div class="gallery-detail">Missing molar, bone loss</div></div>
+          </div>
+          <div class="gallery-after">
+            <div><div class="gallery-label" style="color:var(--teal)">After</div><div class="gallery-detail">Titanium implant, natural look</div></div>
+          </div>
+          <div class="gallery-divider">&#8652;</div>
+        </div>
+        <div class="gallery-body">
+          <div class="gallery-title">Dental Implant</div>
+          <div class="gallery-footer">
+            <span class="badge badge-sky">Dr. Chen</span>
+            <span style="color:var(--slate-light);font-size:12px">Single implant · 3 visits</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-card animate-up delay-2">
+        <div class="gallery-split">
+          <div class="gallery-before">
+            <div><div class="gallery-label" style="color:var(--slate)">Before</div><div class="gallery-detail">Crowded, overlapping teeth</div></div>
+          </div>
+          <div class="gallery-after">
+            <div><div class="gallery-label" style="color:var(--teal)">After</div><div class="gallery-detail">Aligned smile with Invisalign</div></div>
+          </div>
+          <div class="gallery-divider">&#8652;</div>
+        </div>
+        <div class="gallery-body">
+          <div class="gallery-title">Invisalign Treatment</div>
+          <div class="gallery-footer">
+            <span class="badge badge-green">Dr. Nair</span>
+            <span style="color:var(--slate-light);font-size:12px">14 months · 28 aligners</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Testimonials ─── -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:44px">
+      <div class="section-label" style="justify-content:center"><span>Patient Reviews</span></div>
+      <h2 class="display">What Our Patients<br/><em>Say About Us</em></h2>
+      <div class="teal-divider" style="margin:12px auto 0"></div>
+    </div>
+    <div class="testimonial-featured" id="featured-testimonial">
+      <div class="big-quote">"</div>
+      <div class="testimonial-text" id="testimonial-text">I had severe dental anxiety and had avoided the dentist for years. Dr. Whitmore and her team were so patient and kind — I barely felt a thing during my veneer procedure. My smile has completely changed my confidence.</div>
+      <div class="testimonial-author">
+        <div class="author-info">
+          <div class="avatar" id="testimonial-avatar">JM</div>
+          <div>
+            <div class="author-name" id="testimonial-name">Jessica M.</div>
+            <div class="author-loc" id="testimonial-loc">Upper East Side · Veneers Patient</div>
+          </div>
+        </div>
+        <div><span class="stars" style="font-size:18px">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonial-dots"></div>
+    <div class="mini-cards" id="mini-cards"></div>
+    <div style="text-align:center">
+      <div class="google-badge">
+        <span class="google-g">G</span>
+        <div>
+          <div class="google-rating">4.9 / 5 &#9733;</div>
+          <div class="google-count">847 verified Google reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ ─── -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="grid-2" style="align-items:start;gap:56px">
+      <div>
+        <div class="section-label"><span>Common Questions</span></div>
+        <h2 class="display">Frequently<br/><em>Asked Questions</em></h2>
+        <div class="teal-divider"></div>
+        <p style="color:var(--slate);font-size:15px;line-height:1.7">Can't find your answer here? Call us directly or book a free consultation.</p>
+        <div class="faq-cta" style="margin-top:28px;text-align:left">
+          <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px">Still have questions?</div>
+          <div style="font-size:13px;color:var(--slate);margin-bottom:14px">Our team replies within 2 hours during business hours.</div>
+          <button class="btn-teal" onclick="openBooking()">Book a Free Consultation</button>
+        </div>
+      </div>
+      <div id="faq-list"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Contact ─── -->
+<section id="contact" class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-label" style="justify-content:center"><span>Get in Touch</span></div>
+      <h2 class="display">Book Your Free<br/><em>Consultation</em></h2>
+      <div class="teal-divider" style="margin:12px auto 0"></div>
+    </div>
+    <div class="grid-2" style="gap:48px;align-items:start">
+      <div>
+        <div class="contact-info-row">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val"><a href="tel:+18005553464" style="color:var(--navy);font-weight:600">(800) 555-SMILE</a><br/><span style="font-size:12px;color:var(--slate)">Mon–Fri 8am–7pm, Sat 9am–5pm</span></div>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val"><a href="mailto:hello@smilecraftdental.com" style="color:var(--navy);font-weight:600">hello@smilecraftdental.com</a><br/><span style="font-size:12px;color:var(--slate)">Response within 2 business hours</span></div>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Location</div>
+            <div class="contact-val">142 West 57th Street, Suite 1200<br/>New York, NY 10019</div>
+          </div>
+        </div>
+        <div class="contact-info-row">
+          <div class="contact-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-val">Mon–Fri: 8:00 AM – 7:00 PM<br/>Saturday: 9:00 AM – 5:00 PM<br/><span style="font-size:12px;color:var(--red);font-weight:600">Emergency line available 24/7</span></div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="1.5" style="margin-bottom:8px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div style="font-size:13px;font-weight:600">142 W 57th St, NYC</div>
+            <div style="font-size:12px;margin-top:4px">Near Carnegie Hall · Multiple subway lines</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-card">
+        <h3 style="font-size:20px;margin-bottom:6px;color:var(--navy)">Request a Callback</h3>
+        <p style="font-size:13px;color:var(--slate);margin-bottom:20px">Free 15-min consultation — no commitment required.</p>
+        <label class="form-label">Full Name</label>
+        <input class="form-input" id="cf-name" type="text" placeholder="Your name"/>
+        <label class="form-label">Phone Number</label>
+        <input class="form-input" type="tel" placeholder="+1 (555) 000-0000"/>
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" placeholder="your@email.com"/>
+        <label class="form-label">Service Interested In</label>
+        <select class="form-select">
+          <option value="">Select a service...</option>
+          <option>Teeth Whitening</option>
+          <option>Dental Implants</option>
+          <option>Invisalign</option>
+          <option>Veneers</option>
+          <option>Root Canal</option>
+          <option>Smile Makeover</option>
+          <option>General Checkup</option>
+          <option>Emergency Appointment</option>
+        </select>
+        <label class="form-label">Additional Notes</label>
+        <textarea class="form-input" rows="3" placeholder="Tell us a little about your needs or concerns..."></textarea>
+        <button class="btn-primary" onclick="submitForm()" style="width:100%;margin-top:18px;font-size:15px;padding:14px">Send Request</button>
+        <div style="font-size:11px;color:var(--slate-light);text-align:center;margin-top:10px">Your information is private and never shared. HIPAA compliant.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <svg width="32" height="32" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="38" height="38" rx="10" fill="#0E8A7A"/>
+            <path d="M19 7C15.5 7 12 9.5 11 12.5C10.2 14.8 10.5 17 11.5 18.8C12 19.8 12.5 21 12.5 23C12.5 26 13.5 31 15.5 31C16.5 31 17 29.5 17.5 27.5C18 25.5 18.5 24.5 19 24.5C19.5 24.5 20 25.5 20.5 27.5C21 29.5 21.5 31 22.5 31C24.5 31 25.5 26 25.5 23C25.5 21 26 19.8 26.5 18.8C27.5 17 27.8 14.8 27 12.5C26 9.5 22.5 7 19 7Z" fill="white"/>
+            <path d="M15.5 12C16.2 11.2 17.5 10.7 19 10.7C20.5 10.7 21.8 11.2 22.5 12" stroke="#0D2340" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:var(--white)">SmileCraft</div>
+            <div style="font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-light)">Dental Studio</div>
+          </div>
+        </div>
+        <p class="footer-desc">New York's premier destination for cosmetic and restorative dentistry. Combining advanced technology with genuine, patient-first care since 2010.</p>
+        <div class="footer-socials">
+          <div class="social-btn">f</div>
+          <div class="social-btn">in</div>
+          <div class="social-btn">&#9654;</div>
+          <div class="social-btn">&#9679;</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Services</div>
+        <a class="footer-link">Teeth Whitening</a>
+        <a class="footer-link">Dental Implants</a>
+        <a class="footer-link">Invisalign</a>
+        <a class="footer-link">Porcelain Veneers</a>
+        <a class="footer-link">Root Canal</a>
+        <a class="footer-link">Smile Makeover</a>
+      </div>
+      <div>
+        <div class="footer-heading">Our Team</div>
+        <a class="footer-link">Dr. Sophia Whitmore</a>
+        <a class="footer-link">Dr. Marcus Chen</a>
+        <a class="footer-link">Dr. Priya Nair</a>
+        <a class="footer-link" onclick="openBooking()" style="cursor:pointer">Book Appointment</a>
+        <a class="footer-link">Patient Portal</a>
+        <a class="footer-link">Careers</a>
+      </div>
+      <div>
+        <div class="footer-heading">Contact</div>
+        <a class="footer-link" href="tel:+18005553464">(800) 555-SMILE</a>
+        <a class="footer-link" href="mailto:hello@smilecraftdental.com">hello@smilecraftdental.com</a>
+        <div class="footer-link" style="cursor:default">142 W 57th St, Suite 1200<br/>New York, NY 10019</div>
+        <div style="margin-top:12px">
+          <div style="font-size:11px;color:rgba(255,255,255,.4);margin-bottom:5px">EMERGENCY LINE</div>
+          <a href="tel:+18005553464" style="color:var(--teal-light);font-weight:700;font-size:14px">(800) 555-SMILE</a>
+        </div>
+      </div>
+    </div>
+    <div class="certifications">
+      <span class="cert-badge">ADA Member</span>
+      <span class="cert-badge">AACD Fellow</span>
+      <span class="cert-badge">Invisalign Diamond+</span>
+      <span class="cert-badge">OSHA Certified</span>
+      <span class="cert-badge">HIPAA Compliant</span>
+      <span class="cert-badge">BBB Accredited</span>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2025 SmileCraft Dental Studio. All rights reserved.</div>
+      <div style="display:flex;gap:20px">
+        <a class="footer-link" style="margin:0">Privacy Policy</a>
+        <a class="footer-link" style="margin:0">Terms of Service</a>
+        <a class="footer-link" style="margin:0">Accessibility</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── Floating Buttons ─── -->
+<a id="whatsapp-btn" href="https://wa.me/18005553464" target="_blank" title="WhatsApp Us" style="bottom:22px">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ─── Sticky Mobile CTA ─── -->
+<div id="sticky-cta">
+  <button class="btn-book" onclick="openBooking()">Book Free Consultation</button>
+  <a class="btn-emerg" href="tel:+18005553464" style="display:flex;align-items:center;justify-content:center;text-decoration:none;color:white">Emergency</a>
+</div>
+
+<!-- ─── Booking Modal ─── -->
+<div id="booking-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeBooking()">&#x2715;</button>
+      <div class="modal-label">SmileCraft Dental Studio</div>
+      <div class="modal-title">Book Your Appointment</div>
+      <div class="progress-steps" id="progress-steps"></div>
+    </div>
+    <div class="modal-body">
+      <!-- Step 0: Service -->
+      <div class="step active">
+        <div class="step-title">Select a Service</div>
+        <div class="service-grid" id="booking-services"></div>
+        <div class="emergency-opt">
+          <div><div class="emergency-opt-text">Dental Emergency?</div><div class="emergency-opt-sub">Call for same-day appointment</div></div>
+          <a href="tel:+18005553464" style="background:var(--red);color:white;padding:7px 14px;border-radius:8px;font-size:13px;font-weight:700">(800) 555-SMILE</a>
+        </div>
+      </div>
+      <!-- Step 1: Doctor + Time -->
+      <div class="step">
+        <div class="step-title">Choose Your Doctor</div>
+        <div class="doctor-list" id="booking-doctors"></div>
+        <div class="step-title" style="margin-top:18px">Select Date &amp; Time</div>
+        <input type="date" class="field-input" id="booking-date" style="width:100%;margin-bottom:12px;border-radius:9px;border:1.5px solid var(--slate-pale);padding:10px 13px;font-size:14px;color:var(--navy);outline:none"/>
+        <div class="time-grid" id="booking-times"></div>
+      </div>
+      <!-- Step 2: Patient Info -->
+      <div class="step">
+        <div class="step-title">Your Details</div>
+        <div class="form-field"><label class="field-label">Full Name</label><input class="field-input" id="p-name" type="text" placeholder="Your full name"/></div>
+        <div class="form-field"><label class="field-label">Email</label><input class="field-input" id="p-email" type="email" placeholder="your@email.com"/></div>
+        <div class="form-field"><label class="field-label">Phone</label><input class="field-input" type="tel" placeholder="+1 (555) 000-0000"/></div>
+        <div class="form-field"><label class="field-label">New or Existing Patient?</label>
+          <select class="field-input" style="appearance:none"><option>New Patient</option><option>Existing Patient</option></select>
+        </div>
+        <div class="privacy-note">Your information is completely secure and HIPAA protected. We will never share your data.</div>
+      </div>
+      <!-- Step 3: Confirmation -->
+      <div class="step">
+        <div class="confirm-icon">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><polyline points="20,6 9,17 4,12"/></svg>
+        </div>
+        <div class="confirm-title">Appointment Requested!</div>
+        <div class="confirm-sub" id="confirm-sub">Confirmation sent to your email. We'll send a reminder 24 hours before your appointment.</div>
+        <div id="confirm-summary" style="background:var(--warm-gray);border-radius:10px;padding:14px 16px"></div>
+        <button class="btn-teal" onclick="closeBooking()" style="width:100%;margin-top:18px">Done</button>
+      </div>
+      <div class="modal-nav" id="modal-nav">
+        <button class="btn-back" id="btn-back" onclick="prevStep()" style="display:none">Back</button>
+        <button class="btn-next" id="btn-next" onclick="nextStep()">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ─── DATA ─────────────────────────────────────────────────────────────────────
+const SERVICES = [
+  {name:'Teeth Whitening',price:'From $299',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg>'},
+  {name:'Dental Implants',price:'From $1,899',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><rect x="8" y="2" width="8" height="12" rx="4"/><path d="M12 14v8M9 22h6"/></svg>'},
+  {name:'Invisalign',price:'From $3,500',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>'},
+  {name:'Porcelain Veneers',price:'From $950/tooth',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>'},
+  {name:'Root Canal',price:'From $799',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M2 12h20"/></svg>'},
+  {name:'Smile Makeover',price:'Custom quote',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'},
+  {name:'Teeth Cleaning',price:'From $120',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E8A7A" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c.552 0 1-.448 1-1V7c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v4c0 .552.448 1 1 1h18z"/></svg>'},
+  {name:'Emergency Care',price:'Same Day',icon:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E03434" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>'},
+];
+
+const DOCTORS = [
+  {name:'Dr. Sophia Whitmore',role:'Veneers & Smile Design',initials:'SW',rating:'★ 4.9'},
+  {name:'Dr. Marcus Chen',role:'Implants & Oral Surgery',initials:'MC',rating:'★ 4.9'},
+  {name:'Dr. Priya Nair',role:'Invisalign & Orthodontics',initials:'PN',rating:'★ 4.8'},
+  {name:'Any Available',role:'Next available specialist',initials:'?',rating:''},
+];
+
+const TIMES = ['8:00 AM','8:30 AM','9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','2:00 PM','2:30 PM','3:00 PM','4:00 PM'];
+
+const TESTIMONIALS = [
+  {text:'I had severe dental anxiety and had avoided the dentist for years. Dr. Whitmore and her team were so patient and kind — I barely felt a thing during my veneer procedure. My smile has completely changed my confidence.',name:'Jessica M.',loc:'Upper East Side · Veneers Patient',initials:'JM'},
+  {text:'Dr. Chen placed two implants for me after I had put it off for years. The procedure was far less scary than I imagined, and the results are indistinguishable from natural teeth. Absolutely worth it.',name:'Robert K.',loc:'Brooklyn · Implant Patient',initials:'RK'},
+  {text:'Finished my Invisalign with Dr. Nair in just 11 months. She checked in regularly, adjusted the plan, and always made sure I was comfortable. The result is beyond what I expected.',name:'Aisha T.',loc:'Midtown · Invisalign Patient',initials:'AT'},
+  {text:'The whole clinic is spotless and professional, yet somehow still feels warm and welcoming. They explained every step, showed me X-rays on screen, and never made me feel rushed. Five stars.',name:'David L.',loc:'Upper West Side · General Patient',initials:'DL'},
+];
+
+const FAQS = [
+  {q:'Do you accept dental insurance?',a:'Yes — we work with most major PPO insurance plans. Our team will verify your benefits before your first visit and provide a clear cost breakdown. We also offer CareCredit and 0% APR in-house financing.'},
+  {q:'How long do veneers last?',a:'Porcelain veneers typically last 15–20 years with proper care. We use only high-quality, lab-crafted porcelain and provide a detailed aftercare guide. Annual polishing and avoiding hard foods extends longevity significantly.'},
+  {q:'Is Invisalign as effective as braces?',a:'For most mild to moderate alignment cases, Invisalign is equally effective. Dr. Nair is a Diamond Plus Provider in the top 1% nationwide. During your consultation, she will advise whether Invisalign or braces is the better option for your specific case.'},
+  {q:'What should I do in a dental emergency?',a:'Call our emergency line at (800) 555-SMILE immediately. We offer same-day appointments for broken teeth, severe pain, lost crowns, and dental trauma. Do not wait — untreated dental emergencies can worsen quickly.'},
+  {q:'How much does a dental implant cost?',a:'Single implants start from $1,899 at SmileCraft, which includes the implant, abutment, and crown. We also offer 0% APR financing. Dr. Chen will provide an exact quote after reviewing your X-rays and bone structure.'},
+  {q:'Do you treat children?',a:'Yes — Dr. Whitmore and her team provide comprehensive pediatric dental care from age 3 upwards. We use child-friendly, gentle techniques and have a welcoming environment designed to help young patients feel safe and relaxed.'},
+];
+
+// ─── SERVICES GRID ─────────────────────────────────────────────────────────────
+const sg = document.getElementById('services-grid');
+SERVICES.forEach(sv => {
+  const d = document.createElement('div'); d.className='service-card';
+  d.innerHTML = `
+    <div class="service-icon-wrap">${sv.icon}</div>
+    <div class="service-name">${sv.name}</div>
+    <div class="service-desc">Professional, precision care delivered by board-certified specialists using the latest equipment and techniques.</div>
+    <div class="service-footer"><span class="service-price">${sv.price}</span><span>Free consultation</span></div>
+    <div class="service-expand">Our specialists will assess your individual needs and create a personalised treatment plan. Free consultations available — no commitment required.</div>
+  `;
+  d.onclick = () => d.classList.toggle('open');
+  sg.appendChild(d);
+});
+
+// ─── FAQ ───────────────────────────────────────────────────────────────────────
+const fl = document.getElementById('faq-list');
+FAQS.forEach(f => {
+  const item = document.createElement('div'); item.className='faq-item';
+  item.innerHTML = `<button class="faq-btn"><span class="faq-question">${f.q}</span><span class="faq-toggle">+</span></button><div class="faq-answer"><p>${f.a}</p></div>`;
+  item.querySelector('.faq-btn').onclick = () => {
+    document.querySelectorAll('.faq-item.open').forEach(x => { if(x!==item) x.classList.remove('open'); });
+    item.classList.toggle('open');
+  };
+  fl.appendChild(item);
+});
+
+// ─── TESTIMONIALS ──────────────────────────────────────────────────────────────
+let activeTestimonial = 0;
+const dotsEl = document.getElementById('testimonial-dots');
+const miniEl = document.getElementById('mini-cards');
+
+TESTIMONIALS.forEach((t, i) => {
+  const dot = document.createElement('button'); dot.className='dot' + (i===0?' active':''); dot.onclick = () => setTestimonial(i); dotsEl.appendChild(dot);
+  const mc = document.createElement('div'); mc.className='mini-card' + (i===0?' active':'');
+  mc.innerHTML = `<div><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div><div class="mini-text">"${t.text.slice(0,80)}..."</div><div class="mini-name">${t.name}</div><div class="mini-service">${t.loc.split('·')[1]?.trim()||''}</div>`;
+  mc.onclick = () => setTestimonial(i); miniEl.appendChild(mc);
+});
+
+function setTestimonial(i) {
+  activeTestimonial = i; const t = TESTIMONIALS[i];
+  document.getElementById('testimonial-text').textContent = t.text;
+  document.getElementById('testimonial-name').textContent = t.name;
+  document.getElementById('testimonial-loc').textContent = t.loc;
+  document.getElementById('testimonial-avatar').textContent = t.initials;
+  document.querySelectorAll('.dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+  document.querySelectorAll('.mini-card').forEach((d,j)=>d.classList.toggle('active',j===i));
+}
+setInterval(() => setTestimonial((activeTestimonial+1)%TESTIMONIALS.length), 6000);
+
+// ─── BOOKING MODAL ─────────────────────────────────────────────────────────────
+let currentStep=0;
+const bookingState={service:'',doctor:'',date:'',time:''};
+
+const STEPS=['Service','Doctor & Time','Your Details'];
+const psEl = document.getElementById('progress-steps');
+STEPS.forEach(s => { psEl.innerHTML += `<div class="progress-step"><div class="progress-bar pending"></div><div class="progress-name">${s}</div></div>`; });
+
+function renderProgress() {
+  document.querySelectorAll('.progress-step').forEach((el,i) => {
+    el.querySelector('.progress-bar').className = 'progress-bar ' + (i<=currentStep?'done':'pending');
+    el.querySelector('.progress-name').className = 'progress-name ' + (i<=currentStep?'done':'');
+  });
+}
+
+const bsGrid = document.getElementById('booking-services');
+SERVICES.filter(s=>s.name!=='Emergency Care').forEach(sv => {
+  const b = document.createElement('button'); b.className='service-opt';
+  b.innerHTML = `<div class="service-opt-icon">${sv.icon}</div><div class="service-opt-name">${sv.name}</div><div class="service-opt-price">${sv.price}</div>`;
+  b.onclick = () => { bookingState.service=sv.name; document.querySelectorAll('.service-opt').forEach(x=>x.classList.remove('selected')); b.classList.add('selected'); };
+  bsGrid.appendChild(b);
+});
+
+const bdList = document.getElementById('booking-doctors');
+DOCTORS.forEach(d => {
+  const b = document.createElement('button'); b.className='doctor-opt';
+  b.innerHTML = `<div class="avatar">${d.initials}</div><div><div class="doctor-opt-name">${d.name}</div><div class="doctor-opt-role">${d.role}</div></div><span style="margin-left:auto;font-size:12px;color:var(--teal)">${d.rating}</span>`;
+  b.onclick = () => { bookingState.doctor=d.name; document.querySelectorAll('.doctor-opt').forEach(x=>x.classList.remove('selected')); b.classList.add('selected'); };
+  bdList.appendChild(b);
+});
+
+const btGrid = document.getElementById('booking-times');
+TIMES.forEach(t => {
+  const b = document.createElement('button'); b.className='time-opt'; b.textContent=t;
+  b.onclick = () => { bookingState.time=t; document.querySelectorAll('.time-opt').forEach(x=>x.classList.remove('selected')); b.classList.add('selected'); };
+  btGrid.appendChild(b);
+});
+
+document.getElementById('booking-date').min = new Date().toISOString().split('T')[0];
+document.getElementById('booking-date').onchange = e => bookingState.date = e.target.value;
+
+function showStep(n) {
+  document.querySelectorAll('.step').forEach((s,i)=>s.classList.toggle('active',i===n));
+  document.getElementById('btn-back').style.display = n>0?'block':'none';
+  document.getElementById('btn-next').textContent = n===2?'Confirm Booking':'Continue';
+  document.getElementById('modal-nav').style.display = n===3?'none':'flex';
+  renderProgress();
+}
+
+function nextStep() {
+  if(currentStep===2) {
+    const email = document.getElementById('p-email').value;
+    const name = document.getElementById('p-name').value;
+    document.getElementById('confirm-sub').innerHTML = `Confirmation sent to <strong>${email||'your email'}</strong>. We'll call to confirm within 2 hours.`;
+    const pairs = [['Service',bookingState.service||'—'],['Doctor',bookingState.doctor||'—'],['Date',bookingState.date||'—'],['Time',bookingState.time||'—'],['Patient',name||'—']];
+    document.getElementById('confirm-summary').innerHTML = pairs.map(([k,v])=>`<div class="summary-row"><span class="summary-key">${k}</span><span class="summary-val">${v}</span></div>`).join('');
+  }
+  currentStep = Math.min(currentStep+1, 3); showStep(currentStep);
+}
+function prevStep() { currentStep = Math.max(currentStep-1,0); showStep(currentStep); }
+function openBooking() { currentStep=0; showStep(0); document.getElementById('booking-overlay').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeBooking() { document.getElementById('booking-overlay').classList.remove('open'); document.body.style.overflow=''; }
+document.getElementById('booking-overlay').addEventListener('click',e=>{ if(e.target===document.getElementById('booking-overlay')) closeBooking(); });
+
+// ─── UTILS ─────────────────────────────────────────────────────────────────────
+function scrollToSection(id) { document.getElementById(id)?.scrollIntoView({behavior:'smooth'}); }
+function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+function submitForm() {
+  const name = document.getElementById('cf-name').value.trim();
+  if(!name) { alert('Please enter your name to continue.'); return; }
+  alert('Thank you, ' + name + '! We\'ll be in touch within 2 hours. For urgent needs, call (800) 555-SMILE.');
+}
+
+// Scroll animations
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+}, {threshold:0.1});
+document.querySelectorAll('.service-card,.gallery-card,.doctor-card,.about-feature').forEach(el => {
+  el.style.opacity='0'; el.style.transform='translateY(18px)'; el.style.transition='opacity .6s ease,transform .6s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>

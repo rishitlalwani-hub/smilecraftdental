@@ -398,8 +398,8 @@ footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
 /* ─── BOOKING MODAL ─── */
 #booking-overlay{display:none;position:fixed;inset:0;background:rgba(13,35,64,.65);z-index:1000;align-items:center;justify-content:center;padding:14px;backdrop-filter:blur(4px)}
 #booking-overlay.open{display:flex;animation:scaleIn .25s ease both}
-.modal{background:var(--white);border-radius:18px;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:var(--shadow-lg);overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
-.modal-header{background:linear-gradient(135deg,var(--navy),var(--teal));padding:26px 30px 22px;border-radius:18px 18px 0 0;position:relative}
+.modal{background:var(--white);border-radius:18px;width:100%;max-width:540px;max-height:92vh;display:flex;flex-direction:column;box-shadow:var(--shadow-lg);overscroll-behavior:contain}
+.modal-header{background:linear-gradient(135deg,var(--navy),var(--teal));padding:26px 30px 22px;border-radius:18px 18px 0 0;position:relative;flex-shrink:0}
 .modal-close{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.15);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
 .modal-close:hover{background:rgba(255,255,255,.28)}
 .modal-label{color:rgba(255,255,255,.7);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
@@ -411,7 +411,7 @@ footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
 .progress-bar.pending{background:rgba(255,255,255,.18)}
 .progress-name{font-size:9px;color:rgba(255,255,255,.45);margin-top:4px;font-weight:600}
 .progress-name.done{color:var(--teal-light)}
-.modal-body{padding:26px 30px}
+.modal-body{padding:26px 30px;overflow-y:auto;flex:1;-webkit-overflow-scrolling:touch}
 .step{display:none;animation:fadeUp .3s ease both}.step.active{display:block}
 .step-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:14px}
 .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
@@ -436,7 +436,7 @@ footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
 .field-input{width:100%;padding:10px 13px;border:1.5px solid var(--slate-pale);border-radius:9px;font-size:14px;outline:none;background:var(--offwhite);color:var(--navy);transition:border-color .2s,box-shadow .2s}
 .field-input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(14,138,122,.1)}
 .privacy-note{padding:9px 13px;background:var(--teal-pale);border-radius:7px;font-size:12px;color:var(--navy-mid);margin-top:9px}
-.modal-nav{display:flex;gap:11px;margin-top:20px}
+.modal-nav{display:flex;gap:11px;padding:16px 30px;border-top:1px solid var(--slate-pale);background:var(--white);border-radius:0 0 18px 18px;flex-shrink:0}
 .btn-back{flex:1;padding:12px;border:1.5px solid var(--slate-pale);border-radius:9px;background:var(--white);font-size:13px;font-weight:600;cursor:pointer;color:var(--slate);transition:all .2s}
 .btn-back:hover{border-color:var(--teal);color:var(--teal)}
 .btn-next{flex:2;padding:12px;background:linear-gradient(135deg,var(--navy),var(--teal));border:none;border-radius:9px;color:var(--white);font-size:14px;font-weight:700;cursor:pointer;transition:all .2s}
@@ -547,10 +547,11 @@ footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
   #sticky-cta .btn-emerg{font-size:12px;padding:12px}
 
   /* Booking modal */
-  .modal{border-radius:16px 16px 0 0;max-height:82vh;margin-top:auto;overflow-y:auto}
-  #booking-overlay{align-items:flex-end;padding:0;padding-bottom:env(safe-area-inset-bottom,0px)}
-  .modal-header{padding:20px 22px 18px;border-radius:16px 16px 0 0}
-  .modal-body{padding:18px 20px}
+  .modal{border-radius:16px;max-height:88vh}
+  #booking-overlay{align-items:center;padding:16px}
+  .modal-header{padding:18px 20px 16px;border-radius:16px 16px 0 0}
+  .modal-body{padding:16px 18px}
+  .modal-nav{padding:12px 18px;border-radius:0 0 16px 16px}
   .service-grid{grid-template-columns:1fr 1fr;gap:8px}
   .time-grid{grid-template-columns:repeat(3,1fr);gap:7px}
   .service-opt{padding:10px 10px}
@@ -1460,10 +1461,10 @@ footer{background:var(--navy);color:var(--white);padding:60px 5% 28px}
         <div id="confirm-summary" style="background:var(--warm-gray);border-radius:10px;padding:14px 16px"></div>
         <button class="btn-teal" onclick="closeBooking()" style="width:100%;margin-top:18px">Done</button>
       </div>
-      <div class="modal-nav" id="modal-nav">
-        <button class="btn-back" id="btn-back" onclick="prevStep()" style="display:none">Back</button>
-        <button class="btn-next" id="btn-next" onclick="nextStep()">Continue</button>
-      </div>
+    </div>
+    <div class="modal-nav" id="modal-nav">
+      <button class="btn-back" id="btn-back" onclick="prevStep()" style="display:none">Back</button>
+      <button class="btn-next" id="btn-next" onclick="nextStep()">Continue</button>
     </div>
   </div>
 </div>
